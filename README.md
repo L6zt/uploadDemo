@@ -1,2 +1,4 @@
 # uploadDemo
-博客演示地址
+### npm install
+### node server.js
+### 访问地址http://localhost:3000/assert/index.html
