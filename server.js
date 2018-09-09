@@ -6,6 +6,9 @@ const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
 const multipart = require('connect-multiparty');
 const app = express();
+// 生成上传
+const uploadFileP = path.resolve(__dirname, `./upload`);
+fs.existsSync(uploadFileP) || fs.mkdirSync(uploadFileP);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
 app.use('/assert',  express.static(path.resolve(__dirname, `./assert`)));
