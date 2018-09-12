@@ -30,10 +30,10 @@ app.post('/upload', (req, res) => {
 			}
 		}
 		if (done === true) {
-			res.json({flag: true, chunked: true, hasError: false, ext: path.extname(file.name), chunks});
+			res.json({flag: true, hasError: false, ext: path.extname(file.name), chunks});
 		} else {
 			res.json({
-				flag: true, chunked: false, hasError: false
+				flag: true, hasError: false
 			})
 		}
 	});
